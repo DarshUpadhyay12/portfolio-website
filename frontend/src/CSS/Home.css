@@ -189,7 +189,9 @@
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 968px) {
   .home-top {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
     gap: 3rem;
   }
@@ -237,6 +239,6 @@
   }
 
   .photo-frame {
-    max-width: 280px;
+    max-width: 250px;
   }
 }
