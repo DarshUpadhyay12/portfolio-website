@@ -14,7 +14,7 @@ const PROJECTS = [
   {
     title: '🐱🐶 Cats vs Dogs Image Classifier',
     desc: 'Deep learning powered image recognition model designed to classify cats and dogs with high confidence.',
-    ss: '/gallery/cats-vs-dogs-classifier.jpg', // Replace with the exact name of the uploaded image file if different
+    ss: '/gallery/classifier.jpg', // Updated with actual project image
     tech: ['Python', 'Deep Learning', 'Image Classification', 'Streamlit'],
     live: 'https://dogs-vs-cats-classifier-nvj4s7zj7whtzkq2sedaqe.streamlit.app/',
     code: 'https://github.com/DarshUpadhyay12/dogs-vs-cats-classifier'
