@@ -20,10 +20,9 @@ export default function Navbar() {
   const navRef = useRef(null);
   const linksRef = useRef(null);
 
-  // Check if links overflow nav width (to show hamburger)
+  // Use window width for a reliable mobile breakpoint (1050px accommodates 9 links safely)
   const checkOverflow = () => {
-    if (!navRef.current || !linksRef.current) return;
-    setShowButton(linksRef.current.scrollWidth > navRef.current.offsetWidth);
+    setShowButton(window.innerWidth <= 1050);
   };
 
   useEffect(() => {
