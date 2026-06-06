@@ -50,7 +50,7 @@ const AboutMe = () => {
           />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "3rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "clamp(1.5rem, 5vw, 3rem)" }}>
           
           {/* Left Column: About Me Text */}
           <motion.div
@@ -59,7 +59,7 @@ const AboutMe = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="glass-panel"
-            style={{ padding: "3rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}
+            style={{ padding: "clamp(1.5rem, 5vw, 3rem)", display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
             <h3 style={{ fontSize: "1.8rem", color: "#fff", fontWeight: "700" }}>
               My Journey
@@ -90,42 +90,43 @@ const AboutMe = () => {
             <motion.div
               whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.05)" }}
               className="glass-panel"
-              style={{ padding: "2rem", display: "flex", gap: "1.5rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
+              style={{ padding: "clamp(1.2rem, 4vw, 2rem)", display: "flex", gap: "1rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
             >
-              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "12px", borderRadius: "14px", color: "var(--accent-2)" }}>
-                <FaGraduationCap size={28} />
+              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "10px", borderRadius: "12px", color: "var(--accent-2)" }}>
+                <FaGraduationCap size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "600", marginBottom: "0.4rem" }}>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Python Development Intern
                 </h4>
-                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem" }}>
+                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
                   December 2025 - March 2026
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.95rem", color: "var(--muted)" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.9rem", color: "var(--muted)" }}>
                   <span>Pandas & NumPy | Machine Learning Basics</span>
                   <span>Classification Models | Streamlit App Deployment</span>
                   <span>Google Colab | Jupyter Notebook</span>
                 </div>
               </div>
             </motion.div>
+
             {/* Education Card 1 */}
             <motion.div
               whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.05)" }}
               className="glass-panel"
-              style={{ padding: "2rem", display: "flex", gap: "1.5rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
+              style={{ padding: "clamp(1.2rem, 4vw, 2rem)", display: "flex", gap: "1rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
             >
-              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "12px", borderRadius: "14px", color: "var(--accent-2)" }}>
-                <FaUniversity size={28} />
+              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "10px", borderRadius: "12px", color: "var(--accent-2)" }}>
+                <FaUniversity size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "600", marginBottom: "0.4rem" }}>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   B.Tech in Computer Science Engineering
                 </h4>
-                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem" }}>
+                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
                   Asha M. Tarsadia
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.95rem", color: "var(--muted)" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.9rem", color: "var(--muted)" }}>
                   <span>Expected Graduation: 2026 | CGPA: 8.26</span>
                   <span>Google Developer Hackathon Participant</span>
                 </div>
@@ -136,19 +137,19 @@ const AboutMe = () => {
             <motion.div
               whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.05)" }}
               className="glass-panel"
-              style={{ padding: "2rem", display: "flex", gap: "1.5rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
+              style={{ padding: "clamp(1.2rem, 4vw, 2rem)", display: "flex", gap: "1rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
             >
-              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "12px", borderRadius: "14px", color: "var(--accent-2)" }}>
-                <FaGraduationCap size={28} />
+              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "10px", borderRadius: "12px", color: "var(--accent-2)" }}>
+                <FaGraduationCap size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "600", marginBottom: "0.4rem" }}>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Diploma in Computer Engineering
                 </h4>
-                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem" }}>
+                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
                   NG Patel Polytechnic
                 </p>
-                <div style={{ fontSize: "0.95rem", color: "var(--muted)" }}>
+                <div style={{ fontSize: "0.9rem", color: "var(--muted)" }}>
                   <span>CGPA: 7.88 | Year of Completion: 2024</span>
                 </div>
               </div>
@@ -158,19 +159,19 @@ const AboutMe = () => {
             <motion.div
               whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.05)" }}
               className="glass-panel"
-              style={{ padding: "2rem", display: "flex", gap: "1.5rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
+              style={{ padding: "clamp(1.2rem, 4vw, 2rem)", display: "flex", gap: "1rem", alignItems: "flex-start", borderLeft: "4px solid var(--accent-2)" }}
             >
-              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "12px", borderRadius: "14px", color: "var(--accent-2)" }}>
-                <FaSchool size={28} />
+              <div style={{ background: "rgba(0, 119, 255, 0.1)", padding: "10px", borderRadius: "12px", color: "var(--accent-2)" }}>
+                <FaSchool size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "600", marginBottom: "0.4rem" }}>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Secondary Education (10th Grade)
                 </h4>
-                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem" }}>
+                <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
                   Vasishtha School
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.95rem", color: "var(--muted)" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.9rem", color: "var(--muted)" }}>
                   <span>Year of Graduation: 2021 | Percentage: 76.00%</span>
                   <span>Percentile Rank: 86.71</span>
                 </div>

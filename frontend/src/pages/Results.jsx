@@ -68,7 +68,7 @@ export default function Results() {
           style={{
             marginTop: 28,
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: 20,
           }}
         >
