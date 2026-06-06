@@ -13,27 +13,6 @@ const IMAGES = {
    
     // Add more personal photos here
   ],
-  projects: [
-    {
-      id: 1,
-      caption: "AI Agriculture System - My ML project for smart farming",
-      photos: ["/gallery/AI AGRICULTURE.jpg", "/gallery/AI AGRICULTURE-2.jpg"],
-    },
-    // Add more project photos here
-  ],
-  achievements: [
-    {
-      id: 1,
-      caption: "Google AI Developing Hackathon Participant 🏆",
-      photos: ["/gallery/GOOGLE AI HACKATHON.jpg"],
-    },
-    {
-      id: 2,
-      caption: "FIGMA WORKSHOP PARTICIPATION",
-      photos: ["/gallery/FIGMA WORKSHOP PARTICIPATION.jpg"],
-    },
-    // Add more achievement photos here
-  ],
 };
 
 // ✨ Animation Variants
@@ -103,20 +82,7 @@ export default function Gallery() {
         Gallery
       </motion.h2>
 
-      {/* 🧭 Tabs */}
-      <motion.div className="tab-buttons" variants={childVariants}>
-        {["personal", "projects", "achievements"].map((type) => (
-          <motion.button
-            key={type}
-            className={`tab ${tab === type ? "active" : ""}`}
-            onClick={() => setTab(type)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {type.charAt(0).toUpperCase() + type.slice(1)}
-          </motion.button>
-        ))}
-      </motion.div>
+      {/* Tabs removed as there's only one category */}
 
       {/* 🖼️ Posts with Animation on Tab Switch */}
       <AnimatePresence mode="wait">
