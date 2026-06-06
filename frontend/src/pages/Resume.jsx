@@ -56,7 +56,7 @@ export default function Resume() {
               👨‍💻 DARSH UPADHYAY
             </h3>
             <p style={{ margintop: 10, fontSize: 15, color: "#ccc" }}>
-              3rd Year B.Tech — Computer Science & Engineering | Asha M. Tarsadia
+              4th Year B.Tech — Computer Science & Engineering | Asha M. Tarsadia
             </p>
             <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
               📍 Gujarat, India
@@ -80,7 +80,7 @@ export default function Resume() {
           >
             <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
             <p style={{ marginTop: 6, color: "#ccc" }}>
-              3rd Year B.Tech Computer Science Engineering student with strong foundation in core CS subjects, programming languages, and system-level concepts. Knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. Actively participate in technical projects and hackathons, including Google AI Developing Hackathon in Mumbai.
+              4th Year B.Tech Computer Science Engineering student with strong foundation in core CS subjects, programming languages, and system-level concepts. Knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. Actively participate in technical projects and hackathons, including Google AI Developing Hackathon in Mumbai.
             </p>
           </motion.div>
         </motion.div>
@@ -104,7 +104,7 @@ export default function Resume() {
           <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
             <li>
               <strong>B.Tech in Computer Science & Engineering</strong> — Asha M. Tarsadia, 2026 (Expected) <br />
-              <span style={{ color: "#aaa" }}>CGPA: 8.0 | Google Developer Hackathon Participant</span>
+              <span style={{ color: "#aaa" }}>CGPA: 8.26 | Google Developer Hackathon Participant</span>
             </li>
             <li style={{ marginTop: 8 }}>
               <strong>Diploma in Computer Engineering</strong> — NG Patel Polytechnic, 2024 <br />
@@ -113,6 +113,30 @@ export default function Resume() {
             <li style={{ marginTop: 8 }}>
               <strong>10th Board — Vasishtha School</strong>, 2021 <br />
               <span style={{ color: "#aaa" }}>Percentage: 76.00% | Percentile Rank: 86.71</span>
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* Experience Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          style={{
+            marginTop: 40,
+            border: "1px solid rgba(255,255,255,0.1)",
+            borderRadius: 12,
+            padding: "20px 24px",
+            background: "rgba(255,255,255,0.03)",
+          }}
+        >
+          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
+            💼 Experience
+          </h4>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
+            <li>
+              <strong>Python Development Intern</strong> — Dec 2025 - Mar 2026 <br />
+              <span style={{ color: "#aaa" }}>Learned Pandas & NumPy, Machine Learning Basics, Classification Models, and Streamlit App Deployment using Google Colab and Jupyter Notebook.</span>
             </li>
           </ul>
         </motion.div>
@@ -164,6 +188,16 @@ export default function Resume() {
               "Cybersecurity",
               "IoT",
               "Git",
+              "Pandas",
+              "NumPy",
+              "Streamlit",
+              "Google Colab",
+              "Jupyter Notebook",
+              "Teamwork",
+              "Time Management",
+              "Quick Learning",
+              "Discipline",
+              "Communication",
             ].map((skill) => (
               <motion.span
                 key={skill}

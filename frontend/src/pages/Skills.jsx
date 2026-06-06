@@ -21,7 +21,7 @@ const ROWS = [
     { title: "Programming Languages", items: ["C", "C++", "Java", "Python", "JavaScript", "PHP", "C#"] },
     { title: "Web Technologies", items: ["HTML", "CSS", "JavaScript", "PHP"] },
     { title: "Databases", items: ["SQL"] },
-    { title: "Tools", items: ["Git"] },
+    { title: "Tools", items: ["Git", "Google Colab", "Jupyter Notebook", "Streamlit"] },
   ],
   [
     {
@@ -40,6 +40,8 @@ const ROWS = [
         "Artificial Intelligence (Fundamentals)",
         "Machine Learning (Basics)",
         "Data Preprocessing",
+        "Classification Models",
+        "Pandas & NumPy",
       ],
     },
     {
@@ -53,6 +55,18 @@ const ROWS = [
       ],
     },
   ],
+  [
+    {
+      title: "Professional Skills",
+      items: [
+        "Teamwork",
+        "Time Management",
+        "Quick Learning",
+        "Discipline",
+        "Communication"
+      ]
+    }
+  ]
 ];
 
 export default function Skills() {
@@ -100,37 +114,31 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="skills-container" id="skills">
+    <section className="container" id="skills" style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
       {/* Header */}
-      <motion.div
-        className="skills-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-5xl text-cyan-400 font-semibold mb-3">My Skills</h2>
-        <div className="w-28 h-[2px] bg-cyan-400 mx-auto mb-6"></div>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          ✨ Technical expertise blended with creativity — explore my core competencies below.
+      <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <motion.h2
+          className="text-gradient-accent"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          style={{ fontSize: "3.5rem", fontWeight: "800", marginBottom: "1rem", letterSpacing: "-1px" }}
+        >
+          My Arsenal.
+        </motion.h2>
+        <p style={{ color: "var(--muted)", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
+          The tools, technologies, and concepts I use to bring ideas to life.
         </p>
-      </motion.div>
+      </div>
 
-      {/* Floating Orbs with page-load + hover highlight animation */}
+      {/* Floating Orbs Stage */}
       <motion.div
-        className="skills-stage relative mx-auto mb-20"
+        className="skills-stage"
         ref={stageRef}
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        style={{
-          width: "100%",
-          height: "550px",
-          borderRadius: "25px",
-          background: "radial-gradient(circle at 50% 50%, #0a0a0a, #101010)",
-          overflow: "hidden",
-          boxShadow: "inset 0 0 60px rgba(0,255,255,0.07)",
-          position: "relative",
-        }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
       >
         {SKILLS.map((s, i) => (
           <motion.div
@@ -139,77 +147,50 @@ export default function Skills() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.08, duration: 0.6, ease: "easeOut" }}
-            whileHover={{
-              scale: 1.3,
-              boxShadow: "0 0 35px 10px rgba(0,255,255,0.6)",
-              background: "rgba(0,255,255,0.12)",
-            }}
-            style={{
-              width: "110px",
-              height: "110px",
-              borderRadius: "50%",
-              position: "absolute",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              background: "rgba(0,255,255,0.06)",
-              border: "1px solid rgba(0,255,255,0.25)",
-              backdropFilter: "blur(8px)",
-              cursor: "pointer",
-              transition: "box-shadow 0.4s ease, background 0.4s ease",
-            }}
           >
-            <motion.img
-              src={s.logo}
-              alt={s.name}
-              style={{
-                width: "50px",
-                height: "50px",
-                objectFit: "contain",
-                filter: "drop-shadow(0 0 8px rgba(0,255,255,0.4)) brightness(1.2)",
-                marginBottom: "5px",
-              }}
-              whileHover={{
-                filter: "drop-shadow(0 0 12px rgba(0,255,255,0.9)) brightness(1.6)",
-                rotate: [0, 6, -6, 0],
-                transition: { duration: 0.5 },
-              }}
-            />
-            <span
-              style={{
-                color: "rgba(180,255,255,0.9)",
-                fontSize: "13px",
-                fontWeight: 500,
-                letterSpacing: "0.3px",
-              }}
-            >
-              {s.name}
-            </span>
+            <img src={s.logo} alt={s.name} />
+            <span>{s.name}</span>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Skills Table (Text Section) */}
+      {/* Skills Grid */}
       <div className="skills-table">
         {ROWS.map((row, rowIndex) => (
           <div key={rowIndex} className="skills-row">
             {row.map((col, colIndex) => (
               <motion.div
                 key={col.title}
-                className="skill-box"
+                className="glass-panel"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{
-                  duration: 0.6,
-                  delay: (rowIndex + colIndex) * 0.1,
+                viewport={{ once: true, margin: "-50px" }}
+                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 119, 255, 0.1)" }}
+                transition={{ duration: 0.5, delay: colIndex * 0.1 }}
+                style={{
+                  padding: "2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem"
                 }}
               >
-                <h3>{col.title}</h3>
-                <ul>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--accent-2)", margin: 0 }}>
+                  {col.title}
+                </h3>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.8rem" }}>
                   {col.items.map((item, i) => (
-                    <motion.li key={i} whileHover={{ x: 6, color: "#00ffc8" }}>
+                    <motion.li 
+                      key={i} 
+                      whileHover={{ x: 5, color: "#fff" }}
+                      style={{ 
+                        color: "var(--muted)", 
+                        fontSize: "1rem",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px"
+                      }}
+                    >
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--accent-2)" }} />
                       {item}
                     </motion.li>
                   ))}

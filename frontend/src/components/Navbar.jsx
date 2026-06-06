@@ -7,8 +7,8 @@ const links = [
   { label: "Projects", to: "/projects" },
   { label: "Gallery", to: "/gallery" },
   { label: "Skills", to: "/skills" },
+  { label: "Results", to: "/results" },
   { label: "Certificates", to: "/certificates" },
-  { label: "Blog", to: "/blog" },
   { label: "Resume", to: "/resume" },
   { label: "About Me", to: "/about" },
   { label: "Contact", to: "/contact" },
@@ -33,44 +33,46 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
-      {/* --- Navbar --- */}
-      <nav
+    <div style={{ display: "flex", justifyContent: "center", width: "100%", position: "sticky", top: "20px", zIndex: 100, padding: "0 20px" }}>
+      {/* --- Floating Navbar --- */}
+      <motion.nav
         ref={navRef}
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem",
-          borderBottom: "1px solid rgba(255,255,255,0.1)",
-          background: "rgba(0,0,0,0.6)",
-          backdropFilter: "blur(10px)",
-          fontFamily: "inherit",
+          padding: "0.8rem 1.5rem",
+          border: "1px solid var(--glass-border)",
+          background: "rgba(10, 12, 16, 0.65)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          borderRadius: "50px",
+          width: "100%",
+          maxWidth: "1100px",
+          boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 119, 255, 0.05)",
         }}
       >
         {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <motion.div
             className="logo"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
             style={{
-              fontWeight: "bold",
-              fontSize: "1.4rem",
-              color: "var(--accent)",
+              fontWeight: "800",
+              fontSize: "1.2rem",
+              background: "linear-gradient(135deg, var(--accent-2), var(--accent))",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              cursor: "pointer"
             }}
           >
-            DU
+            DU.
           </motion.div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <h1 style={{ margin: 0, fontSize: 14 }}>Darsh Upadhyay</h1>
-            <div style={{ fontSize: 12, color: "var(--muted)" }}>
-              ML • AI • Developer
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", justifySelf: "center" }}>
+            <h1 style={{ margin: 0, fontSize: 14, fontWeight: "600", letterSpacing: "0.5px" }}>Darsh</h1>
           </div>
         </div>
 
@@ -80,9 +82,8 @@ export default function Navbar() {
           style={{
             display: showButton ? "none" : "flex",
             justifyContent: "center",
-            gap: "2rem",
+            gap: "1.5rem",
             alignItems: "center",
-            flexGrow: 1,
           }}
         >
           {links.map((l) => (
@@ -92,45 +93,35 @@ export default function Navbar() {
               end
               style={{
                 position: "relative",
-                fontSize: "0.95rem",
+                fontSize: "0.9rem",
                 textDecoration: "none",
-                color: "white",
+                color: "var(--muted)",
                 fontWeight: 500,
+                letterSpacing: "0.3px",
+                padding: "0.4rem 0.6rem",
               }}
             >
               {({ isActive }) => (
                 <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    color: "var(--accent)",
-                    textShadow: "0 0 8px var(--accent)",
-                  }}
-                  transition={{ duration: 0.3 }}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
+                  whileHover={{ color: "#fff" }}
+                  transition={{ duration: 0.2 }}
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
                 >
-                  <motion.span
-                    animate={{ color: isActive ? "var(--accent)" : "white" }}
-                    transition={{ duration: 0.3 }}
-                  >
+                  <motion.span animate={{ color: isActive ? "#fff" : "var(--muted)" }}>
                     {l.label}
                   </motion.span>
                   {isActive && (
                     <motion.div
-                      layoutId="underline"
-                      initial={{ opacity: 0, y: 5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
+                      layoutId="nav-indicator"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       style={{
-                        width: "70%",
-                        height: "2px",
-                        marginTop: "4px",
-                        borderRadius: "1px",
-                        backgroundColor: "var(--accent)",
-                        boxShadow: "0 0 6px var(--accent)",
+                        position: "absolute",
+                        bottom: "-4px",
+                        width: "6px",
+                        height: "6px",
+                        borderRadius: "50%",
+                        backgroundColor: "var(--accent-2)",
+                        boxShadow: "0 0 10px var(--accent-2)",
                       }}
                     />
                   )}
@@ -140,86 +131,87 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger */}
+        {/* Mobile Hamburger Button */}
         {showButton && (
-          <div className="mobile-btn">
-            <button
-              style={{
-                background: "none",
-                border: "none",
-                color: "#fff",
-                fontSize: "1.8rem",
-                cursor: "pointer",
-                zIndex: 10000,
-              }}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? "✕" : "☰"}
-            </button>
-          </div>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              border: "1px solid var(--glass-border)",
+              color: "#fff",
+              fontSize: "1.2rem",
+              cursor: "pointer",
+              borderRadius: "50%",
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 10000,
+            }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? "✕" : "☰"}
+          </motion.button>
         )}
-      </nav>
+      </motion.nav>
 
-      {/* --- Mobile Dropdown Menu --- */}
+      {/* --- Premium Mobile Dropdown Menu --- */}
       <AnimatePresence>
         {isOpen && showButton && (
           <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
+            initial={{ opacity: 0, scale: 0.95, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             style={{
               position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100vh",
-              background: "rgba(0,0,0,0.95)",
-              backdropFilter: "blur(12px)",
+              top: "80px",
+              left: "5%",
+              width: "90%",
+              maxHeight: "80vh",
+              background: "rgba(10, 12, 16, 0.85)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              border: "1px solid var(--glass-border)",
+              borderRadius: "24px",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              paddingTop: "4rem",
+              padding: "1.5rem 0",
               overflowY: "auto",
               zIndex: 9999,
+              boxShadow: "0 30px 60px rgba(0,0,0,0.6)",
             }}
           >
-            <button
-              style={{
-                position: "absolute",
-                top: "1rem",
-                right: "1rem",
-                fontSize: "2rem",
-                color: "#fff",
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
-              onClick={() => setIsOpen(false)}
-            >
-              ✕
-            </button>
-
-            {links.map((l) => (
-              <NavLink
+            {links.map((l, i) => (
+              <motion.div
                 key={l.to}
-                to={l.to}
-                onClick={() => setIsOpen(false)}
-                style={{
-                  color: "#fff",
-                  textDecoration: "none",
-                  padding: "1rem 0",
-                  width: "100%",
-                  textAlign: "center",
-                  fontSize: 16,
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
-                }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.05 }}
               >
-                {l.label}
-              </NavLink>
+                <NavLink
+                  to={l.to}
+                  onClick={() => setIsOpen(false)}
+                  style={({ isActive }) => ({
+                    color: isActive ? "#fff" : "var(--muted)",
+                    textDecoration: "none",
+                    padding: "1rem 2rem",
+                    display: "block",
+                    fontSize: "1.1rem",
+                    fontWeight: isActive ? 600 : 400,
+                    borderLeft: isActive ? "3px solid var(--accent-2)" : "3px solid transparent",
+                    background: isActive ? "linear-gradient(90deg, rgba(0,119,255,0.1), transparent)" : "transparent",
+                  })}
+                >
+                  {l.label}
+                </NavLink>
+              </motion.div>
             ))}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

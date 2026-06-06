@@ -119,3 +119,80 @@
   height: 100vh; /* cover full screen */
   z-index: 1000; /* already done */
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-link-content {
+    font-size: 0.9rem;
+  }
+
+  .underline {
+    width: 60%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-name h1 {
+    font-size: 12px;
+  }
+
+  .nav-tagline {
+    font-size: 10px;
+  }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.8rem 1rem;
+    gap: 1rem;
+  }
+
+  .nav-left {
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-name h1 {
+    font-size: 11px;
+  }
+
+  .nav-tagline {
+    font-size: 9px;
+    display: none; /* Hide tagline on very small screens */
+  }
+
+  /* Hide desktop links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Mobile menu button always visible */
+  .mobile-btn button {
+    font-size: 1.5rem;
+  }
+
+  .mobile-dropdown {
+    padding-top: 3rem;
+  }
+
+  .mobile-dropdown a {
+    padding: 1rem 0;
+    font-size: 16px;
+  }
+}

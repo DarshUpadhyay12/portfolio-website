@@ -1,73 +1,47 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ✅ Certificates data (added URLs for View button)
-const CERTS = {
-  tech: [
+// Expected paths for result images inside the `public/results` folder
+const RESULTS_DATA = {
+  "10th": [
     {
-      title: "GOOGLE AI HACKATHON",
-
-      date: "2025",
-      org: "Google",
-      img: "/certs/GOOGLE AI HACKATHON.jpg",
-      link: "/certs/GOOGLE AI HACKATHON.jpg",
-    },
-    {
-      title: "DIPLOMA IN COMPUTER ENGINEERING(GTU)",
-      org: "Gujarat Technological University",
-      date: "2024",
-      img: "/certs/DIPLOMA IN COMPUTER ENGINEERING(GTU).jpg",
-      link: "/certs/DIPLOMA IN COMPUTER ENGINEERING(GTU).jpg",
-    },
-    {
-      title: "FIGMA WORKSHOP PARTICIPATION",
-      org: "figma",
-      date: "2024",
-      img: "/certs/FIGMA WORKSHOP PARTICIPATION.jpg",
-      link: "/certs/FIGMA WORKSHOP PARTICIPATION.jpg",
-    },
-    {
-      title: "PYTHON COURSE OF 3 MONTHS",
-      org: "CODECTECHNOLOGY",
-      date: "2024",
-      img: "/certs/PYTHON COURSE OF 3 MONTHS.jpg",
-      link: "/certs/PYTHON COURSE OF 3 MONTHS.jpg",
-    },
-    {
-      title: "PYTHON DEVELOPMENT INTERNSHIP",
-      org: "Python Development",
-      date: "Dec 2025 - Mar 2026",
-      img: "/certs/PYTHON DEVELOPMENT INTERNSHIP.jpg",
-      link: "/certs/PYTHON DEVELOPMENT INTERNSHIP.jpg",
+      title: "10th Standard Marksheet",
+      org: "State Board",
+      date: "2021",
+      img: "/results/10th.jpg",
+      link: "/results/10th.jpg",
     },
   ],
-  other: [
-    {
-      title: "INTERCOLLAGE CRICKET TOURNAMENT RUNNERSUP",
-      org: "CRICKET",
-      date: "2026",
-      img: "/certs/INTERCOLLAGE CRICKET RUNNERSUP.jpg",
-      link: "/certs/INTERCOLLAGE CRICKET RUNNERSUP.jpg",
-    }
-
+  "diploma": [
+    { title: "Diploma Semester 1", org: "GTU", date: "Sem 1", img: "/results/diploma-sem1.jpg", link: "/results/diploma-sem1.jpg" },
+    { title: "Diploma Semester 2", org: "GTU", date: "Sem 2", img: "/results/diploma-sem2.jpg", link: "/results/diploma-sem2.jpg" },
+    { title: "Diploma Semester 3", org: "GTU", date: "Sem 3", img: "/results/diploma-sem3.jpg", link: "/results/diploma-sem3.jpg" },
+    { title: "Diploma Semester 4", org: "GTU", date: "Sem 4", img: "/results/diploma-sem4.jpg", link: "/results/diploma-sem4.jpg" },
+    { title: "Diploma Semester 5", org: "GTU", date: "Sem 5", img: "/results/diploma-sem5.jpg", link: "/results/diploma-sem5.jpg" },
+    { title: "Diploma Semester 6", org: "GTU", date: "Sem 6", img: "/results/diploma-sem6.jpg", link: "/results/diploma-sem6.jpg" },
+  ],
+  "btech": [
+    { title: "BTech Semester 3", org: "University", date: "Sem 3", img: "/results/btech-sem3.jpg", link: "/results/btech-sem3.jpg" },
+    { title: "BTech Semester 4", org: "University", date: "Sem 4", img: "/results/btech-sem4.jpg", link: "/results/btech-sem4.jpg" },
+    { title: "BTech Semester 5", org: "University", date: "Sem 5", img: "/results/btech-sem5.jpg", link: "/results/btech-sem5.jpg" },
   ],
 };
 
-export default function Certificates() {
-  const [tab, setTab] = useState("tech");
-  const [selectedCert, setSelectedCert] = useState(null);
+export default function Results() {
+  const [tab, setTab] = useState("10th");
+  const [selectedResult, setSelectedResult] = useState(null);
 
   return (
     <section className="container" style={{ padding: "40px 0" }}>
       <div className="card" style={{ background: "#111", borderRadius: 12, padding: 24 }}>
-        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Certificates 🏅</h2>
+        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Academic Results 📊</h2>
         <p className="lead" style={{ color: "#aaa" }}>
-          Explore my certifications — technical & others.
+          View my academic marksheets and performance over the years.
         </p>
 
         {/* Tabs */}
-        <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-          {["tech", "other"].map((t) => (
+        <div style={{ display: "flex", gap: 10, marginTop: 16, flexWrap: "wrap" }}>
+          {["10th", "diploma", "btech"].map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -83,12 +57,12 @@ export default function Certificates() {
                 transition: "0.3s",
               }}
             >
-              {t === "tech" ? "Tech" : "Others"}
+              {t === "10th" ? "10th Grade" : t === "diploma" ? "Diploma (Sem 1-6)" : "BTech (Sem 3-5)"}
             </button>
           ))}
         </div>
 
-        {/* Certificates Grid */}
+        {/* Results Grid */}
         <div
           className="certs-grid"
           style={{
@@ -99,7 +73,7 @@ export default function Certificates() {
           }}
         >
           <AnimatePresence mode="wait">
-            {CERTS[tab].map((c, idx) => (
+            {RESULTS_DATA[tab].map((c, idx) => (
               <motion.div
                 key={c.title}
                 className="cert card"
@@ -127,7 +101,9 @@ export default function Certificates() {
                     borderRadius: 10,
                     objectFit: "cover",
                     marginBottom: 12,
+                    backgroundColor: "#222" // Fallback color while missing
                   }}
+                  onError={(e) => { e.target.src = "https://via.placeholder.com/400x300/222222/cccccc?text=Image+Missing" }}
                 />
                 <strong style={{ fontSize: 16 }}>{c.title}</strong>
                 <div className="muted" style={{ fontSize: 13, color: "#bbb" }}>
@@ -137,7 +113,7 @@ export default function Certificates() {
                 <div style={{ marginTop: 12 }}>
                   <button
                     className="btn"
-                    onClick={() => setSelectedCert(c)}
+                    onClick={() => setSelectedResult(c)}
                     style={{
                       background: "#007bff",
                       border: "none",
@@ -158,7 +134,7 @@ export default function Certificates() {
 
       {/* Modal Preview */}
       <AnimatePresence>
-        {selectedCert && (
+        {selectedResult && (
           <motion.div
             className="modal"
             initial={{ opacity: 0 }}
@@ -176,11 +152,11 @@ export default function Certificates() {
               alignItems: "center",
               zIndex: 1000,
             }}
-            onClick={() => setSelectedCert(null)}
+            onClick={() => setSelectedResult(null)}
           >
             <motion.img
-              src={selectedCert.img}
-              alt={selectedCert.title}
+              src={selectedResult.img}
+              alt={selectedResult.title}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -191,6 +167,7 @@ export default function Certificates() {
                 boxShadow: "0 0 25px rgba(255,255,255,0.2)",
               }}
               onClick={(e) => e.stopPropagation()}
+              onError={(e) => { e.target.src = "https://via.placeholder.com/800x600/222222/cccccc?text=Image+Missing" }}
             />
           </motion.div>
         )}

@@ -1,117 +1,102 @@
-/* ---------- Header: smaller, left-aligned, no big gaps ---------- */
-.skills-header {
-  text-align: left;
-  margin: 10px 0 12px 4%;
-  padding: 0;
-  max-width: calc(100% - 8%);
-}
+/* -------------------------------------------------------------
+ * PREMIUM UI REDESIGN - SKILLS SECTION
+ * ------------------------------------------------------------- */
 
-.skills-header h2 {
-  font-size: 1.25rem;
-  color: #00ffe0;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.05;
-}
-
-.skills-underline {
-  width: 60px;
-  height: 2px;
-  background: #00ffe0;
-  margin: 6px 0 8px 0;
-}
-
-.skills-header p {
-  color: #b0b0b0;
-  font-size: 0.95rem;
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------- Orb area: narrower margins and reduced height ---------- */
+/* ---------- Orb Area ---------- */
 .skills-stage {
   position: relative;
-  width: 94%;
+  width: 100%;
   max-width: 1200px;
-  height: 360px;
-  margin: 20px auto;
-  border-radius: 14px;
-  background: radial-gradient(circle at 50% 50%, #080808, #0f0f0f);
-  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.08);
+  height: 400px;
+  margin: 2rem auto;
+  border-radius: 32px;
+  background: rgba(10, 12, 16, 0.4);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 0 80px rgba(0, 119, 255, 0.05);
+  backdrop-filter: blur(12px);
   overflow: hidden;
 }
 
-/* Shrink the orbs themselves (logo + text) */
+/* Floating Orbs */
 .skill-circle {
   position: absolute;
-  width: 68px;
-  height: 68px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 255, 255, 0.04);
-  border: 1px solid rgba(0, 255, 255, 0.18);
-  backdrop-filter: blur(6px);
+  background: rgba(10, 12, 16, 0.6);
+  border: 1px solid rgba(0, 119, 255, 0.2);
+  backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.skill-circle:hover {
+  transform: scale(1.15) !important;
+  border-color: rgba(0, 119, 255, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 119, 255, 0.2), inset 0 0 15px rgba(0, 119, 255, 0.1);
+  z-index: 10;
 }
 
 .skill-circle img {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 2px;
-  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.36)) brightness(1.1);
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.skill-circle:hover img {
+  filter: drop-shadow(0 0 10px rgba(0, 119, 255, 0.6)) brightness(1.2);
 }
 
 .skill-circle span {
-  font-size: 10px;
-  color: rgba(180, 255, 255, 0.9);
-  line-height: 1;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.5px;
   margin: 0;
   padding: 0;
 }
 
-/* ---------- Skills Table: unchanged from original ---------- */
+/* ---------- Skills Grid ---------- */
 .skills-table {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skills-row {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
 }
 
-.skill-box {
-  background: linear-gradient(145deg, #080808 0%, #0f0f0f 100%);
-  border: 1px solid rgba(0, 255, 255, 0.12);
-  border-radius: 12px;
-  padding: 18px 22px;
-  width: 300px;
-  text-align: left;
-}
-
-.skill-box h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #00ffe0;
-  margin-bottom: 10px;
-}
-
-.skill-box ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.skill-box li {
-  font-size: 0.875rem;
-  color: #b0b0b0;
-  margin-bottom: 6px;
-  transition: color 0.2s, transform 0.2s;
+@media (max-width: 768px) {
+  .skills-stage {
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  .skill-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .skill-circle img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .skill-circle span {
+    font-size: 0.65rem;
+  }
 }
