@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const links = [
   { label: "Home", to: "/" },
   { label: "Projects", to: "/projects" },
-  { label: "Gallery", to: "/gallery" },
   { label: "Skills", to: "/skills" },
   { label: "Results", to: "/results" },
   { label: "Certificates", to: "/certificates" },
   { label: "Resume", to: "/resume" },
   { label: "About Me", to: "/about" },
+  { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
 ];
 
