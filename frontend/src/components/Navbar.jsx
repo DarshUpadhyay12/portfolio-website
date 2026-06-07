@@ -70,9 +70,6 @@ export default function Navbar() {
           >
             DU.
           </motion.div>
-          <div style={{ display: "flex", flexDirection: "column", justifySelf: "center" }}>
-            <h1 style={{ margin: 0, fontSize: 14, fontWeight: "600", letterSpacing: "0.5px" }}>Darsh</h1>
-          </div>
         </div>
 
         {/* Desktop links */}
