@@ -85,38 +85,6 @@ export default function Resume() {
           </motion.div>
         </motion.div>
 
-        {/* Education Section with Border Box */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          style={{
-            marginTop: 40,
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 12,
-            padding: "20px 24px",
-            background: "rgba(255,255,255,0.03)",
-          }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
-            🎓 Education
-          </h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>
-              <strong>B.Tech in Computer Science & Engineering</strong> — Asha M. Tarsadia, 2026 (Expected) <br />
-              <span style={{ color: "#aaa" }}>CGPA: 8.26 | Google Developer Hackathon Participant</span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>Diploma in Computer Engineering</strong> — NG Patel Polytechnic, 2024 <br />
-              <span style={{ color: "#aaa" }}>CGPA: 7.88</span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>10th Board — Vasishtha School</strong>, 2021 <br />
-              <span style={{ color: "#aaa" }}>Percentage: 76.00% | Percentile Rank: 86.71</span>
-            </li>
-          </ul>
-        </motion.div>
-
         {/* Experience Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -141,80 +109,6 @@ export default function Resume() {
           </ul>
         </motion.div>
 
-        {/* Projects */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          style={{ marginTop: 40 }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>💼 Projects</h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>🌾 AI Agriculture System — AI-based agriculture solution for data-driven farming decisions using ML techniques</li>
-          </ul>
-        </motion.div>
-
-        {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          style={{ marginTop: 40 }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>⚙️ Skills</h4>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {[
-              "C",
-              "C++",
-              "Java",
-              "Python",
-              "JavaScript",
-              "PHP",
-              "C#",
-              "HTML",
-              "CSS",
-              "SQL",
-              "Data Structures & Algorithms",
-              "Operating Systems",
-              "DBMS",
-              "Computer Networks",
-              "Software Engineering",
-              "Artificial Intelligence",
-              "Machine Learning",
-              "Data Preprocessing",
-              "Android Development",
-              "Flutter",
-              "Cloud Computing",
-              "Cybersecurity",
-              "IoT",
-              "Git",
-              "Pandas",
-              "NumPy",
-              "Streamlit",
-              "Google Colab",
-              "Jupyter Notebook",
-              "Teamwork",
-              "Time Management",
-              "Quick Learning",
-              "Discipline",
-              "Communication",
-            ].map((skill) => (
-              <motion.span
-                key={skill}
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(0,180,255,0.3)" }}
-                style={{
-                  background: "rgba(255,255,255,0.05)",
-                  padding: "6px 12px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#ccc",
-                }}
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
