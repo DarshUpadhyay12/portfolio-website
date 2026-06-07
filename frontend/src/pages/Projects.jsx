@@ -30,7 +30,7 @@ const PROJECTS = [
   {
     title: '✋ Hand Gesture Control',
     desc: 'An innovative application that uses computer vision to map hand gestures to system commands. Check HOW_TO_RUN.txt in the repo to run it locally.',
-    ss: '/gallery/darsh photo-1.jpg', // Placeholder, user should upload actual image
+    ss: '/gallery/Hand Gesture.jpg', // Updated image
     tech: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
     live: '',
     code: 'https://github.com/DarshUpadhyay12/Hand-Gesture-Control'
