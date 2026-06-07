@@ -54,7 +54,7 @@ export default function Home() {
           className="home-info"
         >
           <motion.h1 variants={itemVariants} className="home-title">
-            Hi, <br/>
+            Hey there, I'm <br/>
             <span className="home-name">Darsh Upadhyay.</span>
           </motion.h1>
 

@@ -188,6 +188,11 @@
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 968px) {
+  .home-section {
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+
   .home-top {
     display: flex;
     flex-direction: column-reverse;
