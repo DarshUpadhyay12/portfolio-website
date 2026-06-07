@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "../CSS/Gallery.css";
 
+const isVideo = (url) => {
+  return url && url.match(/\.(mp4|webm|ogg|mov)$/i);
+};
+
 const IMAGES = {
   personal: [
     {
@@ -115,7 +119,11 @@ export default function Gallery() {
                     transition={{ type: "spring", stiffness: 250 }}
                     onClick={() => openZoom(post, i)}
                   >
-                    <img src={src} alt="gallery" />
+                    {isVideo(src) ? (
+                      <video src={src} muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    ) : (
+                      <img src={src} alt="gallery" />
+                    )}
                   </motion.div>
                 ))}
               </div>
@@ -134,16 +142,30 @@ export default function Gallery() {
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.4 }}
           >
-            <motion.img
-              key={zoom.img}
-              src={zoom.img}
-              alt="zoom"
-              className="zoom-img"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            />
+            {isVideo(zoom.img) ? (
+              <motion.video
+                key={zoom.img}
+                src={zoom.img}
+                controls
+                autoPlay
+                className="zoom-img"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            ) : (
+              <motion.img
+                key={zoom.img}
+                src={zoom.img}
+                alt="zoom"
+                className="zoom-img"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            )}
 
             {zoom.post?.photos.length > 1 && (
               <>
