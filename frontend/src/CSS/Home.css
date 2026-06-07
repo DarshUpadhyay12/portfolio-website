@@ -190,7 +190,7 @@
 @media (max-width: 968px) {
   .home-section {
     justify-content: flex-start;
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   .home-top {
@@ -199,7 +199,7 @@
     align-items: center;
     text-align: center;
     gap: 3rem;
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   
   .home-info {
