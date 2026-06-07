@@ -120,8 +120,8 @@
   border-radius: 32px;
   overflow: hidden;
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow-premium);
   z-index: 2;
@@ -215,8 +215,8 @@
   }
 
   .photo-frame {
-    max-width: 350px;
-    border-radius: 50%;
+    max-width: 320px;
+    border-radius: 32px;
   }
   
   .quick-links {
