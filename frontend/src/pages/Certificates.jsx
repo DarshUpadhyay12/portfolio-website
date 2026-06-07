@@ -40,6 +40,13 @@ const CERTS = {
       img: "/certs/PYTHON DEVELOPMENT INTERNSHIP.jpg",
       link: "/certs/PYTHON DEVELOPMENT INTERNSHIP.jpg",
     },
+    {
+      title: "PYTHON WITH DJANGO INTERNSHIP",
+      org: "BrainyBeam Technology Pvt. Ltd.",
+      date: "Sep 2022 - Oct 2022",
+      img: "/certs/Python with Django.jpg",
+      link: "/certs/Python with Django.jpg",
+    },
   ],
   other: [
     {
