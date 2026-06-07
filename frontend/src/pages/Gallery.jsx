@@ -14,8 +14,11 @@ const IMAGES = {
       caption: "Just me enjoying nature 🌄",
       photos: ["/gallery/darsh photo-1.jpg", "/gallery/dear.jpg"],
     },
-   
-    // Add more personal photos here
+    {
+      id: 2,
+      caption: "Some beautiful clips of daman🏖️",
+      photos: ["/gallery/Daman.mp4"],
+    },
   ],
 };
 
