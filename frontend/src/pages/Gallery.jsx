@@ -19,6 +19,16 @@ const IMAGES = {
       caption: "Some beautiful clips of daman🏖️",
       photos: ["/gallery/Daman.mp4"],
     },
+    {
+      id: 3,
+      caption: "Participated in google hackethon mumbai",
+      photos: ["/gallery/Google Hackathon.MP4"],
+    },
+    {
+      id: 4,
+      caption: "Nainital — nature’s way of showing off 😍",
+      photos: ["/gallery/Nainital.MP4"],
+    },
   ],
 };
 
