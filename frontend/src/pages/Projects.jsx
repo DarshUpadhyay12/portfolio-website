@@ -27,6 +27,14 @@ const PROJECTS = [
     live: 'https://smart-attendance-system-1yyl.vercel.app/',
     code: 'https://github.com/DarshUpadhyay12/Smart-Attendance-System'
   },
+  {
+    title: '✋ Hand Gesture Control',
+    desc: 'An innovative application that uses computer vision to map hand gestures to system commands. Check HOW_TO_RUN.txt in the repo to run it locally.',
+    ss: '/gallery/darsh photo-1.jpg', // Placeholder, user should upload actual image
+    tech: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
+    live: '',
+    code: 'https://github.com/DarshUpadhyay12/Hand-Gesture-Control'
+  },
 ]
 
 export default function Projects() {
@@ -146,30 +154,32 @@ export default function Projects() {
                 </div>
 
                 <div style={{ display: "flex", gap: "1rem", marginTop: "auto" }}>
-                  <motion.a
-                    href={p.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    whileHover={{ scale: 1.05, background: "var(--accent)" }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "0.5rem",
-                      background: "var(--accent-2)",
-                      color: "#fff",
-                      padding: "10px 20px",
-                      borderRadius: "12px",
-                      fontSize: "0.95rem",
-                      fontWeight: "600",
-                      textDecoration: "none",
-                      boxShadow: "0 10px 20px rgba(0, 119, 255, 0.2)",
-                      flex: 1
-                    }}
-                  >
-                    <ExternalLink size={18} /> Live Demo
-                  </motion.a>
+                  {p.live && p.live !== '#' && (
+                    <motion.a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.05, background: "var(--accent)" }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "0.5rem",
+                        background: "var(--accent-2)",
+                        color: "#fff",
+                        padding: "10px 20px",
+                        borderRadius: "12px",
+                        fontSize: "0.95rem",
+                        fontWeight: "600",
+                        textDecoration: "none",
+                        boxShadow: "0 10px 20px rgba(0, 119, 255, 0.2)",
+                        flex: 1
+                      }}
+                    >
+                      <ExternalLink size={18} /> Live Demo
+                    </motion.a>
+                  )}
                   
                   <motion.a
                     href={p.code}
