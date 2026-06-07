@@ -47,6 +47,20 @@ const CERTS = {
       img: "/certs/Python with Django.jpg",
       link: "/certs/Python with Django.jpg",
     },
+    {
+      title: "INTRODUCTION TO MODEL CONTEXT PROTOCOL",
+      org: "ANTHROPIC",
+      date: "Mar 2026",
+      img: "/certs/MCP.jpg",
+      link: "https://verify.skilljar.com/c/j6u3xx578q7z",
+    },
+    {
+      title: "MODEL CONTEXT PROTOCOL: ADVANCED TOPICS",
+      org: "ANTHROPIC",
+      date: "Mar 2026",
+      img: "/certs/MCP ADVANCE.jpg",
+      link: "https://verify.skilljar.com/c/kewsn5nxqtkx",
+    },
   ],
   other: [
     {
