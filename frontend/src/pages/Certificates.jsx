@@ -68,6 +68,13 @@ const CERTS = {
       img: "/certs/Java Internship 2023.jpg",
       link: "/certs/Java Internship 2023.jpg",
     },
+    {
+      title: "API CERTIFICATION",
+      org: "API",
+      date: "2024",
+      img: "/certs/API.jpg",
+      link: "/certs/API.jpg",
+    },
   ],
   other: [
     {
