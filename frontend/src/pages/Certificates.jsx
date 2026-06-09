@@ -61,6 +61,13 @@ const CERTS = {
       img: "/certs/MCP ADVANCE.jpg",
       link: "https://verify.skilljar.com/c/kewsn5nxqtkx",
     },
+    {
+      title: "JAVA INTERNSHIP 2023",
+      org: "Java Internship",
+      date: "2023",
+      img: "/certs/Java Internship 2023.jpg",
+      link: "/certs/Java Internship 2023.jpg",
+    },
   ],
   other: [
     {
