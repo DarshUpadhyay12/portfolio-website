@@ -35,6 +35,14 @@ const PROJECTS = [
     live: '',
     code: 'https://github.com/DarshUpadhyay12/Hand-Gesture-Control'
   },
+  {
+    title: '📄 AI Resume Analyzer',
+    desc: 'An intelligent tool that analyzes resumes using AI to provide actionable feedback, parsing, and scoring.',
+    ss: '/gallery/darsh photo-1.jpg', // Placeholder, user should upload actual image
+    tech: ['React', 'Python', 'NLP', 'Machine Learning'],
+    live: 'https://ai-resume-analyzer-sooty-nine.vercel.app/',
+    code: 'https://github.com/DarshUpadhyay12/ai-resume-analyzer'
+  },
 ]
 
 export default function Projects() {
