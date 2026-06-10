@@ -91,7 +91,7 @@ export default function Projects() {
               }}
             >
               {/* Image Side */}
-              <div style={{ flex: "1 1 400px", position: "relative", overflow: "hidden" }}>
+              <div style={{ flex: "1 1 400px", position: "relative", overflow: "hidden", minHeight: "300px" }}>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
@@ -103,8 +103,9 @@ export default function Projects() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      minHeight: "300px",
+                      aspectRatio: "16/9",
                       objectFit: "cover",
+                      objectPosition: "top center",
                     }}
                   />
                   <div style={{
