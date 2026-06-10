@@ -8,7 +8,7 @@ export default function Blog() {
     {
       id: 1,
       title: "My Journey into AI & Machine Learning",
-      text: "As a BTech CSE student, diving into AI/ML has been transformative. My AI Agriculture System project opened my eyes to how technology can solve real-world problems in farming. The combination of Python, data analysis, and machine learning algorithms feels like the perfect blend of logic and creativity.",
+      text: "As a BTech CSE student, diving into AI/ML has been transformative. My AI projects have opened my eyes to how technology can solve real-world problems. The combination of Python, data analysis, and machine learning algorithms feels like the perfect blend of logic and creativity.",
     },
     {
       id: 2,
@@ -22,8 +22,8 @@ export default function Blog() {
     },
     {
       id: 4,
-      title: "The Future of Technology in Agriculture",
-      text: "Working on AI-powered farming solutions has made me passionate about AgriTech. Imagine farmers using smartphone apps to get crop disease predictions or optimize irrigation. This is where my technical skills meet my desire to create meaningful impact in society.",
+      title: "The Future of AI in Recruitment",
+      text: "Working on my AI Resume Analyzer has made me passionate about HRTech. Imagine recruiters using intelligent systems to instantly screen candidates and provide automated, unbiased feedback. This is where my technical skills meet my desire to create meaningful impact in the professional world.",
     },
     {
       id: 5,
