@@ -4,14 +4,6 @@ import { Github, ExternalLink } from 'lucide-react'
 
 const PROJECTS = [
   {
-    title: '🌾 AI Agriculture System',
-    desc: 'An AI-based agriculture solution designed to assist farmers in data-driven decision making using machine learning techniques.',
-    ss: '/gallery/AI AGRICULTURE.jpg', // Updated with actual project image
-    tech: ['Python', 'Machine Learning', 'Data Analysis', 'AI Concepts'],
-    live: '#',
-    code: 'https://github.com/DarshUpadhyay12/AI-Agriculture' // Update with actual link
-  },
-  {
     title: '🐱🐶 Cats vs Dogs Image Classifier',
     desc: 'Deep learning powered image recognition model designed to classify cats and dogs with high confidence.',
     ss: '/gallery/classifier.jpg', // Updated with actual project image
@@ -38,7 +30,7 @@ const PROJECTS = [
   {
     title: '📄 AI Resume Analyzer',
     desc: 'An intelligent tool that analyzes resumes using AI to provide actionable feedback, parsing, and scoring.',
-    ss: '/gallery/darsh photo-1.jpg', // Placeholder, user should upload actual image
+    ss: '/gallery/ResumeAnalyzer.jpg', // Updated image
     tech: ['React', 'Python', 'NLP', 'Machine Learning'],
     live: 'https://ai-resume-analyzer-sooty-nine.vercel.app/',
     code: 'https://github.com/DarshUpadhyay12/ai-resume-analyzer'
