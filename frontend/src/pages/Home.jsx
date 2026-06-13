@@ -59,7 +59,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p variants={itemVariants} className="typing-effect">
-            I am a BTech CSE 4th Year Student & Aspiring Software Engineer <br/> 
+            I am a Computer Science Engineer & Aspiring Software Engineer <br/> 
             passionate about building scalable applications and exploring AI.
           </motion.p>
 

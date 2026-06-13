@@ -66,7 +66,7 @@ const AboutMe = () => {
             </h3>
             <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.8 }}>
               Hi, I’m <strong style={{ color: "var(--accent-2)" }}>Darsh Upadhyay</strong> — a{" "}
-              <strong style={{ color: "#fff" }}>BTech CSE 4th Year Student</strong> and{" "}
+              <strong style={{ color: "#fff" }}>Computer Science Engineer</strong> and{" "}
               <strong style={{ color: "#fff" }}>Aspiring Software Engineer</strong> with a strong foundation in core CS subjects, programming languages, and system-level concepts.
             </p>
             <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.8 }}>

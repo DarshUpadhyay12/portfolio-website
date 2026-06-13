@@ -80,7 +80,7 @@ export default function Resume() {
           >
             <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
             <p style={{ marginTop: 6, color: "#ccc" }}>
-              4th Year B.Tech Computer Science Engineering student with strong foundation in core CS subjects, programming languages, and system-level concepts. Knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. Actively participate in technical projects and hackathons, including Google AI Developing Hackathon in Mumbai.
+              Computer Science Engineer with strong foundation in core CS subjects, programming languages, and system-level concepts. Knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. Actively participate in technical projects and hackathons, including Google AI Developing Hackathon in Mumbai.
             </p>
           </motion.div>
         </motion.div>

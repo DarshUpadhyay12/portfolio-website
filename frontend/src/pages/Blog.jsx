@@ -8,12 +8,12 @@ export default function Blog() {
     {
       id: 1,
       title: "My Journey into AI & Machine Learning",
-      text: "As a BTech CSE student, diving into AI/ML has been transformative. My AI projects have opened my eyes to how technology can solve real-world problems. The combination of Python, data analysis, and machine learning algorithms feels like the perfect blend of logic and creativity.",
+      text: "As a Computer Science Engineer, diving into AI/ML has been transformative. My AI projects have opened my eyes to how technology can solve real-world problems. The combination of Python, data analysis, and machine learning algorithms feels like the perfect blend of logic and creativity.",
     },
     {
       id: 2,
       title: "From Diploma to BTech: A Learning Odyssey",
-      text: "Transitioning from my Diploma in Computer Engineering to BTech CSE has been challenging but rewarding. Each semester brings new concepts - from data structures to deep learning. The key lesson? Never stop learning, and always connect theory with practical applications.",
+      text: "Transitioning from my Diploma in Computer Engineering to becoming a Computer Science Engineer has been challenging but rewarding. Each semester brought new concepts - from data structures to deep learning. The key lesson? Never stop learning, and always connect theory with practical applications.",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function Blog() {
     {
       id: 5,
       title: "Balancing Code and College Life",
-      text: "Being a student developer means juggling assignments, projects, hackathons, and personal growth. Time management and consistent learning are key. Whether it's debugging code at 2 AM or presenting projects, every experience builds character and skills.",
+      text: "Being an engineer means juggling projects, hackathons, continuous learning, and personal growth. Time management and consistent learning are key. Whether it's debugging code at 2 AM or presenting solutions, every experience builds character and skills.",
     },
     {
       id: 6,
