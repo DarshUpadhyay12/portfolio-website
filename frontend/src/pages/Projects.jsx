@@ -99,7 +99,8 @@ export default function Projects() {
                 >
                   <img
                     src={p.ss}
-                    alt={p.title}
+                    alt={`${p.title} project screenshot`}
+                    loading="lazy"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -159,7 +160,7 @@ export default function Projects() {
                     <motion.a
                       href={p.live}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, background: "var(--accent)" }}
                       whileTap={{ scale: 0.95 }}
                       style={{
@@ -185,7 +186,7 @@ export default function Projects() {
                   <motion.a
                     href={p.code}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05, background: "rgba(255,255,255,0.1)" }}
                     whileTap={{ scale: 0.95 }}
                     style={{

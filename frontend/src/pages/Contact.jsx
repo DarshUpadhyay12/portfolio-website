@@ -43,15 +43,15 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "service_khqov8b", // User's service ID
-        "template_zyg2g7n", // User's template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           from_email: form.contact,
           subject: form.subject,
           message: form.message,
         },
-        "PC_Cm5Nj4T_cpYkAv" // User's public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setStatus("✅ Message sent successfully!");

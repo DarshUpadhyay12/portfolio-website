@@ -155,7 +155,8 @@ export default function Certificates() {
               >
                 <img
                   src={c.img}
-                  alt={c.title}
+                  alt={`${c.title} certificate`}
+                  loading="lazy"
                   style={{
                     width: "100%",
                     height: 160,

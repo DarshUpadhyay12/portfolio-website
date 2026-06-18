@@ -135,7 +135,7 @@ export default function Gallery() {
                     {isVideo(src) ? (
                       <video src={src} muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     ) : (
-                      <img src={src} alt="gallery" />
+                      <img src={src} alt={post.caption || "Gallery photo"} loading="lazy" />
                     )}
                   </motion.div>
                 ))}
@@ -171,7 +171,7 @@ export default function Gallery() {
               <motion.img
                 key={zoom.img}
                 src={zoom.img}
-                alt="zoom"
+                alt={zoom.post?.caption || "zoomed image"}
                 className="zoom-img"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -182,15 +182,15 @@ export default function Gallery() {
 
             {zoom.post?.photos.length > 1 && (
               <>
-                <button className="nav-btn left" onClick={prevImage}>
+                <button className="nav-btn left" aria-label="Previous Image" onClick={prevImage}>
                   <ChevronLeft size={32} />
                 </button>
-                <button className="nav-btn right" onClick={nextImage}>
+                <button className="nav-btn right" aria-label="Next Image" onClick={nextImage}>
                   <ChevronRight size={32} />
                 </button>
               </>
             )}
-            <button className="close-btn" onClick={closeZoom}>
+            <button className="close-btn" aria-label="Close Preview" onClick={closeZoom}>
               <X size={28} />
             </button>
           </motion.div>
