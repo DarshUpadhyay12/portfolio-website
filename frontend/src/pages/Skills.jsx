@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import TiltCard from "../components/TiltCard";
 import "./Skills.css";
 
 const SKILLS = [
