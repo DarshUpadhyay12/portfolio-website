@@ -159,21 +159,22 @@ export default function Skills() {
         {ROWS.map((row, rowIndex) => (
           <div key={rowIndex} className="skills-row">
             {row.map((col, colIndex) => (
-              <motion.div
-                key={col.title}
-                className="glass-panel"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 119, 255, 0.1)" }}
-                transition={{ duration: 0.5, delay: colIndex * 0.1 }}
-                style={{
-                  padding: "2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem"
-                }}
-              >
+              <TiltCard key={col.title}>
+                <motion.div
+                  className="glass-panel"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 119, 255, 0.1)" }}
+                  transition={{ duration: 0.5, delay: colIndex * 0.1 }}
+                  style={{
+                    padding: "2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                    height: "100%"
+                  }}
+                >
                 <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--accent-2)", margin: 0 }}>
                   {col.title}
                 </h3>
@@ -196,6 +197,7 @@ export default function Skills() {
                   ))}
                 </ul>
               </motion.div>
+            </TiltCard>
             ))}
           </div>
         ))}

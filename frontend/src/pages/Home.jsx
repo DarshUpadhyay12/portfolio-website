@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import "../CSS/Home.css"
 import '../index.css'
@@ -11,6 +11,8 @@ const gmailLogo = '/gmail.png'
 const whatsappLogo = '/whatsapp.png'
 const instagramLogo = '/insta.png'
 const facebookLogo = '/facebook.png'
+
+const Hero3D = lazy(() => import('../components/Hero3D'));
 
 export default function Home() {
   const professions = [
@@ -44,6 +46,7 @@ export default function Home() {
   return (
     <section className="home-section">
       <div className="home-top">
+        <Suspense fallback={null}><Hero3D /></Suspense>
         
         {/* Left: Info Section */}
         <motion.div

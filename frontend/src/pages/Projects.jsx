@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import TiltCard from '../components/TiltCard'
 import { Github, ExternalLink } from 'lucide-react'
 
 const PROJECTS = [
@@ -72,9 +73,9 @@ export default function Projects() {
         {PROJECTS.map((p, idx) => {
           const isEven = idx % 2 === 0;
           return (
-            <motion.div
-              key={idx}
-              className="glass-panel"
+            <TiltCard key={idx} className="glass-panel-wrapper">
+              <motion.div
+                className="glass-panel"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -209,7 +210,8 @@ export default function Projects() {
                   </motion.a>
                 </div>
               </div>
-            </motion.div>
+              </motion.div>
+            </TiltCard>
           );
         })}
       </div>
