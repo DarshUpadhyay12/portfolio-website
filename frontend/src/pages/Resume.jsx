@@ -55,7 +55,7 @@ export default function Resume() {
             <h3 style={{ fontSize: 24, color: "#00b4ff", marginBottom: 4 }}>
               👨‍💻 DARSH UPADHYAY
             </h3>
-            <p style={{ margintop: 10, fontSize: 15, color: "#ccc" }}>
+            <p style={{ marginTop: 10, fontSize: 15, color: "#ccc" }}>
               4th Year B.Tech — Computer Science & Engineering | Asha M. Tarsadia
             </p>
             <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>

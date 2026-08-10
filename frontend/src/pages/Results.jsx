@@ -104,7 +104,7 @@ export default function Results() {
                     marginBottom: 12,
                     backgroundColor: "#222" // Fallback color while missing
                   }}
-                  onError={(e) => { e.target.src = "https://via.placeholder.com/400x300/222222/cccccc?text=Image+Missing" }}
+                  onError={(e) => { e.target.src = "https://placehold.co/400x300/222222/cccccc?text=Image+Missing" }}
                 />
                 <strong style={{ fontSize: 16 }}>{c.title}</strong>
                 <div className="muted" style={{ fontSize: 13, color: "#bbb" }}>
@@ -168,7 +168,7 @@ export default function Results() {
                 boxShadow: "0 0 25px rgba(255,255,255,0.2)",
               }}
               onClick={(e) => e.stopPropagation()}
-              onError={(e) => { e.target.src = "https://via.placeholder.com/800x600/222222/cccccc?text=Image+Missing" }}
+              onError={(e) => { e.target.src = "https://placehold.co/800x600/222222/cccccc?text=Image+Missing" }}
             />
           </motion.div>
         )}
