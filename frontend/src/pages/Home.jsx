@@ -17,7 +17,6 @@ export default function Home() {
     'Aspiring Software Engineer',
     'AI/ML Enthusiast',
     'Web Developer',
-    'Problem Solver',
   ]
 
   const quickLinks = [

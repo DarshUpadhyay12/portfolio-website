@@ -24,6 +24,7 @@ const RESULTS_DATA = {
     { title: "BTech Semester 3", org: "University", date: "Sem 3", img: "/results/btech-sem3.jpg", link: "/results/btech-sem3.jpg" },
     { title: "BTech Semester 4", org: "University", date: "Sem 4", img: "/results/btech-sem4.jpg", link: "/results/btech-sem4.jpg" },
     { title: "BTech Semester 5", org: "University", date: "Sem 5", img: "/results/btech-sem5.jpg", link: "/results/btech-sem5.jpg" },
+    { title: "BTech Semester 6", org: "University", date: "Sem 6", img: "/results/btech-sem6.jpeg", link: "/results/btech-sem6.jpeg" },
   ],
 };
 

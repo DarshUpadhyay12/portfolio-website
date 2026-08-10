@@ -127,7 +127,7 @@ const AboutMe = () => {
                   Asha M. Tarsadia
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "0.9rem", color: "var(--muted)" }}>
-                  <span>Expected Graduation: 2026 | CGPA: 8.26</span>
+                  <span>Expected Graduation: 2026 | CGPA: 8.50</span>
                   <span>Google Developer Hackathon Participant</span>
                 </div>
               </div>
