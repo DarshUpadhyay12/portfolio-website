@@ -58,7 +58,7 @@ export default function Results() {
                 transition: "0.3s",
               }}
             >
-              {t === "10th" ? "10th Grade" : t === "diploma" ? "Diploma (Sem 1-6)" : "BTech (Sem 3-5)"}
+              {t === "10th" ? "10th Grade" : t === "diploma" ? "Diploma (Sem 1-6)" : "BTech (Sem 3-6)"}
             </button>
           ))}
         </div>
