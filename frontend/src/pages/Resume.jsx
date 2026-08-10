@@ -10,7 +10,7 @@ export default function Resume() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         style={{
-          background: "#0b0b0b",
+          background: "var(--bg)",
           borderRadius: 16,
           padding: "40px 30px",
           color: "#e5e5e5",
@@ -21,7 +21,7 @@ export default function Resume() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          style={{ fontSize: 28, color: "#00b4ff", marginBottom: 12 }}
+          style={{ fontSize: 28, color: "var(--accent)", marginBottom: 12 }}
         >
           📄 Resume
         </motion.h2>
@@ -30,7 +30,7 @@ export default function Resume() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          style={{ color: "#aaa", marginBottom: 25 }}
+          style={{ color: "var(--muted)", marginBottom: 25 }}
         >
           A quick glance at my journey.
         </motion.p>
@@ -52,16 +52,16 @@ export default function Resume() {
           }}
         >
           <div>
-            <h3 style={{ fontSize: 24, color: "#00b4ff", marginBottom: 4 }}>
+            <h3 style={{ fontSize: 24, color: "var(--accent)", marginBottom: 4 }}>
               👨‍💻 DARSH UPADHYAY
             </h3>
-            <p style={{ marginTop: 10, fontSize: 15, color: "#ccc" }}>
+            <p style={{ marginTop: 10, fontSize: 15, color: "var(--muted)" }}>
               4th Year B.Tech — Computer Science & Engineering | Asha M. Tarsadia
             </p>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
+            <p style={{ margin: "4px 0", fontSize: 14, color: "var(--muted)" }}>
               📍 Gujarat, India
             </p>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
+            <p style={{ margin: "4px 0", fontSize: 14, color: "var(--muted)" }}>
               ✉️ darshupadhyay14@gmail.com | 📞 +91 8866563899
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Resume() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             style={{
-              background: "linear-gradient(135deg, #00b4ff44, #0b0b0b)",
+              background: "linear-gradient(135deg, var(--accent)44, var(--bg))",
               borderRadius: 12,
               padding: "14px 20px",
               border: "1px solid rgba(255,255,255,0.1)",
@@ -78,8 +78,8 @@ export default function Resume() {
               lineHeight: 1.6,
             }}
           >
-            <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
-            <p style={{ marginTop: 6, color: "#ccc" }}>
+            <strong style={{ color: "var(--accent)" }}>Professional Summary:</strong>
+            <p style={{ marginTop: 6, color: "var(--muted)" }}>
               Computer Science Engineer with strong foundation in core CS subjects, programming languages, and system-level concepts. Knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. Actively participate in technical projects and hackathons, including Google AI Developing Hackathon in Mumbai.
             </p>
           </motion.div>
@@ -98,13 +98,13 @@ export default function Resume() {
             background: "rgba(255,255,255,0.03)",
           }}
         >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
+          <h4 style={{ fontSize: 20, color: "var(--accent)", marginBottom: 12 }}>
             💼 Experience
           </h4>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
             <li>
               <strong>Python Development Intern</strong> — Dec 2025 - Mar 2026 <br />
-              <span style={{ color: "#aaa" }}>Learned Pandas & NumPy, Machine Learning Basics, Classification Models, and Streamlit App Deployment using Google Colab and Jupyter Notebook.</span>
+              <span style={{ color: "var(--muted)" }}>Learned Pandas & NumPy, Machine Learning Basics, Classification Models, and Streamlit App Deployment using Google Colab and Jupyter Notebook.</span>
             </li>
           </ul>
         </motion.div>
@@ -129,9 +129,9 @@ export default function Resume() {
               href={site.link}
               target="_blank"
               rel="noreferrer"
-              whileHover={{ scale: 1.1, color: "#00b4ff" }}
+              whileHover={{ scale: 1.1, color: "var(--accent)" }}
               style={{
-                color: "#ccc",
+                color: "var(--muted)",
                 textDecoration: "none",
                 fontSize: 15,
                 fontWeight: 500,
@@ -161,7 +161,7 @@ export default function Resume() {
               width: "100%",
               height: "650px",
               border: "none",
-              background: "#111",
+              background: "var(--card)",
             }}
           />
         </motion.div>
@@ -175,8 +175,8 @@ export default function Resume() {
           style={{
             display: "inline-block",
             marginTop: 20,
-            background: "#00b4ff",
-            color: "#fff",
+            background: "var(--accent)",
+            color: "#E6E9EF",
             padding: "10px 22px",
             borderRadius: 8,
             textDecoration: "none",

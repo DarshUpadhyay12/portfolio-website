@@ -1,5 +1,5 @@
 .gallery-container {
-  background: #0b0b0b;
+  background: var(--bg);
   /* Aesthetic black theme */
   min-height: 100vh;
   padding: 5px 20px;
@@ -33,7 +33,7 @@
   border: 1px solid #444;
   padding: 8px 18px;
   border-radius: 20px;
-  color: #ccc;
+  color: var(--muted);
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -69,7 +69,7 @@
 
 .caption {
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--muted);
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -93,7 +93,7 @@
   width: 100%;
   height: 250px;
   object-fit: contain;
-  background-color: #0b0b0b;
+  background-color: var(--bg);
   cursor: pointer;
   border-radius: 10px;
   transition: transform 0.3s ease;

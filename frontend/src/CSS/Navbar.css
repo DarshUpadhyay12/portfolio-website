@@ -1,6 +1,6 @@
 :root {
-  --accent: #00b4ff;
-  --muted: #aaa;
+  --accent: var(--accent);
+  --muted: var(--muted);
 }
 
 /* --- Navbar Container --- */

@@ -94,9 +94,9 @@ export default function Certificates() {
 
   return (
     <section className="container" style={{ padding: "40px 0" }}>
-      <div className="card" style={{ background: "#111", borderRadius: 12, padding: 24 }}>
-        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Certificates 🏅</h2>
-        <p className="lead" style={{ color: "#aaa" }}>
+      <div className="card" style={{ background: "var(--card)", borderRadius: 12, padding: 24 }}>
+        <h2 style={{ fontSize: "1.8rem", color: "#E6E9EF", marginBottom: 4 }}>Certificates 🏅</h2>
+        <p className="lead" style={{ color: "var(--muted)" }}>
           Explore my certifications — technical & others.
         </p>
 
@@ -113,7 +113,7 @@ export default function Certificates() {
                 border: "none",
                 cursor: "pointer",
                 background: tab === t ? "#007bff" : "#333",
-                color: "#fff",
+                color: "#E6E9EF",
                 fontWeight: 500,
                 transition: "0.3s",
               }}
@@ -150,7 +150,7 @@ export default function Certificates() {
                   background: "#1a1a1a",
                   borderRadius: 12,
                   padding: 16,
-                  color: "#fff",
+                  color: "#E6E9EF",
                 }}
               >
                 <img
@@ -177,7 +177,7 @@ export default function Certificates() {
                     style={{
                       background: "#007bff",
                       border: "none",
-                      color: "white",
+                      color: "#E6E9EF",
                       borderRadius: 6,
                       padding: "6px 14px",
                       cursor: "pointer",

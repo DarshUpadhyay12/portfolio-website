@@ -51,7 +51,7 @@ export default function Navbar() {
           borderRadius: "50px",
           width: "100%",
           maxWidth: "1100px",
-          boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 119, 255, 0.05)",
+          boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(245, 166, 35, 0.05)",
         }}
       >
         {/* Logo */}
@@ -99,7 +99,7 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <motion.div
-                  whileHover={{ color: "#fff" }}
+                  whileHover={{ color: "#E6E9EF" }}
                   transition={{ duration: 0.2 }}
                   style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
                 >
@@ -135,7 +135,7 @@ export default function Navbar() {
             style={{
               background: "rgba(255,255,255,0.05)",
               border: "1px solid var(--glass-border)",
-              color: "#fff",
+              color: "#E6E9EF",
               fontSize: "1.2rem",
               cursor: "pointer",
               borderRadius: "50%",

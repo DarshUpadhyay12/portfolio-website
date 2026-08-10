@@ -129,7 +129,7 @@ export default function Projects() {
                 justifyContent: "center",
                 background: "rgba(10, 12, 16, 0.6)"
               }}>
-                <h3 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: "1rem", fontWeight: "700" }}>
+                <h3 style={{ fontSize: "1.8rem", color: "#E6E9EF", marginBottom: "1rem", fontWeight: "700" }}>
                   {p.title}
                 </h3>
                 <p style={{ fontSize: "1rem", color: "var(--muted)", marginBottom: "1.5rem", lineHeight: 1.6 }}>
@@ -169,7 +169,7 @@ export default function Projects() {
                         justifyContent: "center",
                         gap: "0.5rem",
                         background: "var(--accent-2)",
-                        color: "#fff",
+                        color: "#E6E9EF",
                         padding: "10px 20px",
                         borderRadius: "12px",
                         fontSize: "0.95rem",
@@ -195,7 +195,7 @@ export default function Projects() {
                       justifyContent: "center",
                       gap: "0.5rem",
                       background: "rgba(255,255,255,0.05)",
-                      color: "#fff",
+                      color: "#E6E9EF",
                       padding: "10px 20px",
                       borderRadius: "12px",
                       fontSize: "0.95rem",

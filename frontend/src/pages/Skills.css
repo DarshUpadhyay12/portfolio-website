@@ -8,7 +8,7 @@
 
 .skills-header h2 {
   font-size: 1.25rem;      /* smaller title */
-  color: #00ffe0;
+  color: var(--accent-2);
   font-weight: 600;
   margin: 0;               /* remove default margin so there's no extra gap */
   line-height: 1.05;
@@ -17,7 +17,7 @@
 .underline {
   width: 60px;
   height: 2px;
-  background: #00ffe0;
+  background: var(--accent-2);
   margin: 6px 0 8px 0;     /* left aligned under title */
 }
 
@@ -37,8 +37,8 @@
   height: 360px;           /* reduced height (change this number to your exact preference) */
   margin: 20px auto;       /* small vertical gap only */
   border-radius: 14px;
-  background: radial-gradient(circle at 50% 50%, #080808, #0f0f0f);
-  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.08);
+  background: radial-gradient(circle at 50% 50%, var(--bg), var(--card));
+  box-shadow: inset 0 0 40px rgba(61, 220, 151, 0.08);
   overflow: hidden;
 }
 
@@ -52,8 +52,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 255, 255, 0.04);
-  border: 1px solid rgba(0, 255, 255, 0.18);
+  background: rgba(61, 220, 151, 0.04);
+  border: 1px solid rgba(61, 220, 151, 0.18);
   backdrop-filter: blur(6px);
   cursor: pointer;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
@@ -63,7 +63,7 @@
   width: 28px;             /* smaller icon */
   height: 28px;
   margin-bottom: 2px;      /* very small gap */
-  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.36)) brightness(1.1);
+  filter: drop-shadow(0 0 6px rgba(61, 220, 151, 0.36)) brightness(1.1);
 }
 
 .skill-circle span {
@@ -94,8 +94,8 @@
 }
 
 .skill-box {
-  background: linear-gradient(145deg, #080808 0%, #0f0f0f 100%);
-  border: 1px solid rgba(0, 255, 255, 0.12);
+  background: linear-gradient(145deg, var(--bg) 0%, var(--card) 100%);
+  border: 1px solid rgba(61, 220, 151, 0.12);
   border-radius: 12px;
   padding: 18px 22px;
   width: 300px;

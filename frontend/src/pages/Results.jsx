@@ -34,9 +34,9 @@ export default function Results() {
 
   return (
     <section className="container" style={{ padding: "40px 0" }}>
-      <div className="card" style={{ background: "#111", borderRadius: 12, padding: 24 }}>
-        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Academic Results 📊</h2>
-        <p className="lead" style={{ color: "#aaa" }}>
+      <div className="card" style={{ background: "var(--card)", borderRadius: 12, padding: 24 }}>
+        <h2 style={{ fontSize: "1.8rem", color: "#E6E9EF", marginBottom: 4 }}>Academic Results 📊</h2>
+        <p className="lead" style={{ color: "var(--muted)" }}>
           View my academic marksheets and performance over the years.
         </p>
 
@@ -53,7 +53,7 @@ export default function Results() {
                 border: "none",
                 cursor: "pointer",
                 background: tab === t ? "#007bff" : "#333",
-                color: "#fff",
+                color: "#E6E9EF",
                 fontWeight: 500,
                 transition: "0.3s",
               }}
@@ -90,7 +90,7 @@ export default function Results() {
                   background: "#1a1a1a",
                   borderRadius: 12,
                   padding: 16,
-                  color: "#fff",
+                  color: "#E6E9EF",
                 }}
               >
                 <img
@@ -102,7 +102,7 @@ export default function Results() {
                     borderRadius: 10,
                     objectFit: "cover",
                     marginBottom: 12,
-                    backgroundColor: "#222" // Fallback color while missing
+                    backgroundColor: "var(--border)" // Fallback color while missing
                   }}
                   onError={(e) => { e.target.src = "https://placehold.co/400x300/222222/cccccc?text=Image+Missing" }}
                 />
@@ -118,7 +118,7 @@ export default function Results() {
                     style={{
                       background: "#007bff",
                       border: "none",
-                      color: "white",
+                      color: "#E6E9EF",
                       borderRadius: 6,
                       padding: "6px 14px",
                       cursor: "pointer",

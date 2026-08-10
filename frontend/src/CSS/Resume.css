@@ -3,7 +3,7 @@
 }
 
 .resume-card {
-  background: #0b0b0b;
+  background: var(--bg);
   border-radius: 16px;
   padding: 40px 30px;
   color: #e5e5e5;
@@ -12,12 +12,12 @@
 
 .resume-title {
   font-size: 28px;
-  color: #00b4ff;
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
 .resume-subtitle {
-  color: #aaa;
+  color: var(--muted);
   margin-bottom: 25px;
 }
 
@@ -34,18 +34,18 @@
 
 .profile-info h3 {
   font-size: 24px;
-  color: #00b4ff;
+  color: var(--accent);
   margin-bottom: 4px;
 }
 
 .profile-info p {
-  color: #ccc;
+  color: var(--muted);
   margin: 4px 0;
   font-size: 14px;
 }
 
 .profile-summary {
-  background: linear-gradient(135deg, #00b4ff44, #0b0b0b);
+  background: linear-gradient(135deg, var(--accent)44, var(--bg));
   border-radius: 12px;
   padding: 14px 20px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -55,7 +55,7 @@
 }
 
 .profile-summary strong {
-  color: #00b4ff;
+  color: var(--accent);
 }
 
 .resume-section {
@@ -68,7 +68,7 @@
 
 .resume-section h4 {
   font-size: 20px;
-  color: #00b4ff;
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .resume-section li span {
-  color: #aaa;
+  color: var(--muted);
 }
 
 .skills-list {
@@ -94,7 +94,7 @@
   padding: 6px 12px;
   border-radius: 8px;
   font-size: 13px;
-  color: #ccc;
+  color: var(--muted);
 }
 
 .resume-links {
@@ -105,7 +105,7 @@
 }
 
 .resume-links a {
-  color: #ccc;
+  color: var(--muted);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -115,7 +115,7 @@
   width: 100%;
   height: 650px;
   border: none;
-  background: #111;
+  background: var(--card);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -123,7 +123,7 @@
 .resume-download {
   display: inline-block;
   margin-top: 20px;
-  background: #00b4ff;
+  background: var(--accent);
   color: #fff;
   padding: 10px 22px;
   border-radius: 8px;

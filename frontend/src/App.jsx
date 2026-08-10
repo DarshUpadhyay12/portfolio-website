@@ -19,7 +19,7 @@ export default function App() {
     <div className="app">
       <Navbar />
       <main style={{ flex: 1 }}>
-        <Suspense fallback={<div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>Loading...</div>}>
+        <Suspense fallback={<div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: "#E6E9EF" }}>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

@@ -1,6 +1,6 @@
 :root {
   --accent: #007bff;
-  --bg-card: #111;
+  --bg-card: var(--card);
   --bg-cert: #1a1a1a;
   --text-main: #fff;
   --text-muted: #bbb;
@@ -23,7 +23,7 @@
 }
 
 .certs-card .lead {
-  color: #aaa;
+  color: var(--muted);
 }
 
 .certs-tabs {
