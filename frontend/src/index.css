@@ -5,18 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #FAFAF7;
-  --highlight: #C9A66B;
-  --border: #DCDDD6;
-  --text-primary: #1A2233;
-  --card: #F0F1EA;
-  --muted: #6B7280;
-  --accent: #1E3A5F; 
-  --accent-2: #3B6E91;
+  --bg: #F5EFE6;
+  --highlight: #C4622D;
+  --border: #DCD0BC;
+  --text-primary: #2B2018;
+  --card: #EBE1D1;
+  --muted: #6D594C;
+  --accent: #4A3428; 
+  --accent-2: #8B5E3C;
   --glass: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.08);
-  --glow: rgba(0, 0, 0, 0.05);
-  --shadow-premium: 0 10px 30px rgba(0, 0, 0, 0.06), 0 0 40px rgba(0, 0, 0, 0.02);
+  --glow: rgba(74, 52, 40, 0.08);
+  --shadow-premium: 0 10px 30px rgba(74, 52, 40, 0.08), 0 0 40px rgba(74, 52, 40, 0.04);
   font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
