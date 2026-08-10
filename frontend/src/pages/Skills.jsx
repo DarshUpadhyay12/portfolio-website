@@ -181,7 +181,7 @@ export default function Skills() {
                   {col.items.map((item, i) => (
                     <motion.li 
                       key={i} 
-                      whileHover={{ x: 5, color: "#E6E9EF" }}
+                      whileHover={{ x: 5, color: "var(--text-primary)" }}
                       style={{ 
                         color: "var(--muted)", 
                         fontSize: "1rem",

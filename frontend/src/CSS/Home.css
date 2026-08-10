@@ -122,7 +122,7 @@
   width: 100%;
   max-width: 380px;
   aspect-ratio: 3 / 4;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-premium);
   z-index: 2;
   transform-style: preserve-3d;

@@ -118,7 +118,7 @@
   max-width: 90%;
   max-height: 85vh;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px var(--border);
   object-fit: contain;
 }
 

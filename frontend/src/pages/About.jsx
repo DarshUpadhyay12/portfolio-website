@@ -61,13 +61,13 @@ const AboutMe = () => {
             className="glass-panel"
             style={{ padding: "clamp(1.5rem, 5vw, 3rem)", display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
-            <h3 style={{ fontSize: "1.8rem", color: "#E6E9EF", fontWeight: "700" }}>
+            <h3 style={{ fontSize: "1.8rem", color: "var(--text-primary)", fontWeight: "700" }}>
               My Journey
             </h3>
             <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.8 }}>
               Hi, I’m <strong style={{ color: "var(--accent-2)" }}>Darsh Upadhyay</strong> — a{" "}
-              <strong style={{ color: "#E6E9EF" }}>Computer Science Engineer</strong> and{" "}
-              <strong style={{ color: "#E6E9EF" }}>Aspiring Software Engineer</strong> with a strong foundation in core CS subjects, programming languages, and system-level concepts.
+              <strong style={{ color: "var(--text-primary)" }}>Computer Science Engineer</strong> and{" "}
+              <strong style={{ color: "var(--text-primary)" }}>Aspiring Software Engineer</strong> with a strong foundation in core CS subjects, programming languages, and system-level concepts.
             </p>
             <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.8 }}>
               My knowledge spans data structures, operating systems, DBMS, computer networks, and software engineering, along with practical experience in web development, AI/ML, and Android technologies. I actively participate in technical projects and hackathons, including the Google AI Developing Hackathon in Mumbai, and aim to build scalable, real-world software solutions.
@@ -82,7 +82,7 @@ const AboutMe = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
-            <h3 style={{ fontSize: "1.8rem", color: "#E6E9EF", fontWeight: "700", marginBottom: "0.5rem" }}>
+            <h3 style={{ fontSize: "1.8rem", color: "var(--text-primary)", fontWeight: "700", marginBottom: "0.5rem" }}>
               Experience & Education
             </h3>
 
@@ -96,7 +96,7 @@ const AboutMe = () => {
                 <FaGraduationCap size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#E6E9EF", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
+                <h4 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Python Development Intern
                 </h4>
                 <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
@@ -120,7 +120,7 @@ const AboutMe = () => {
                 <FaUniversity size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#E6E9EF", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
+                <h4 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   B.Tech in Computer Science Engineering
                 </h4>
                 <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
@@ -143,7 +143,7 @@ const AboutMe = () => {
                 <FaGraduationCap size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#E6E9EF", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
+                <h4 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Diploma in Computer Engineering
                 </h4>
                 <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>
@@ -165,7 +165,7 @@ const AboutMe = () => {
                 <FaSchool size={24} />
               </div>
               <div>
-                <h4 style={{ color: "#E6E9EF", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
+                <h4 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: "600", marginBottom: "0.3rem" }}>
                   Secondary Education (10th Grade)
                 </h4>
                 <p style={{ color: "var(--accent-2)", fontWeight: "500", marginBottom: "0.5rem", fontSize: "0.95rem" }}>

@@ -139,7 +139,7 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           <form onSubmit={handleSubmit} className="glass-panel" style={{ padding: "clamp(1.5rem, 5vw, 3rem)", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            <h3 style={{ fontSize: "1.5rem", fontWeight: "600", color: "#E6E9EF", marginBottom: "0.5rem", marginTop: 0 }}>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "600", color: "var(--text-primary)", marginBottom: "0.5rem", marginTop: 0 }}>
               Send me a message
             </h3>
             

@@ -176,7 +176,7 @@ export default function Resume() {
             display: "inline-block",
             marginTop: 20,
             background: "var(--accent)",
-            color: "#E6E9EF",
+            color: "var(--text-primary)",
             padding: "10px 22px",
             borderRadius: 8,
             textDecoration: "none",

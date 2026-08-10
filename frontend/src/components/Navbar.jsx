@@ -99,7 +99,7 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <motion.div
-                  whileHover={{ color: "#E6E9EF" }}
+                  whileHover={{ color: "var(--text-primary)" }}
                   transition={{ duration: 0.2 }}
                   style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
                 >
@@ -135,7 +135,7 @@ export default function Navbar() {
             style={{
               background: "rgba(255,255,255,0.05)",
               border: "1px solid var(--glass-border)",
-              color: "#E6E9EF",
+              color: "var(--text-primary)",
               fontSize: "1.2rem",
               cursor: "pointer",
               borderRadius: "50%",
