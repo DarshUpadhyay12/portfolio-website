@@ -17,17 +17,17 @@ const IMAGES = {
     {
       id: 2,
       caption: "Some beautiful clips of daman🏖️",
-      photos: ["/gallery/Daman.mp4"],
+      photos: ["/gallery/Daman_compressed.mp4"],
     },
     {
       id: 3,
       caption: "Participated in google hackethon mumbai",
-      photos: ["/gallery/Google Hackathon.MP4"],
+      photos: ["/gallery/Google_Hackathon_compressed.mp4"],
     },
     {
       id: 4,
       caption: "Nainital — nature’s way of showing off 😍",
-      photos: ["/gallery/Nainital.MP4"],
+      photos: ["/gallery/Nainital_compressed.mp4"],
     },
   ],
 };
@@ -133,7 +133,15 @@ export default function Gallery() {
                     onClick={() => openZoom(post, i)}
                   >
                     {isVideo(src) ? (
-                      <video src={src} muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      <video 
+                        src={src} 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="none"
+                        poster={src.replace('.mp4', '_poster.jpg').replace('.MP4', '_poster.jpg')}
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                      />
                     ) : (
                       <img src={src} alt={post.caption || "Gallery photo"} loading="lazy" />
                     )}
