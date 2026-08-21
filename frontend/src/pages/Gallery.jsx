@@ -16,11 +16,21 @@ const getVimeoId = (url) => {
   return match ? match[1] : null;
 };
 
+
+const isYouTube = (url) => {
+  return url && (url.includes('youtube.com') || url.includes('youtu.be'));
+};
+
+const getYouTubeId = (url) => {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^"&?\/\s]{11})/);
+  return match ? match[1] : null;
+};
+
 const IMAGES = {
   personal: [
     {
       id: 1,
-      caption: "A new Vimeo video",
+      caption: "Mussoorie🫶 ",
       photos: ["https://vimeo.com/1220211241"],
     },
     {
@@ -42,6 +52,11 @@ const IMAGES = {
       id: 5,
       caption: "Nainital — nature’s way of showing off 😍",
       photos: ["/gallery/Nainital_compressed.mp4"],
+    },
+    {
+      id: 6,
+      caption: "YouTube Video",
+      photos: ["https://youtu.be/s85qySBMkzA"],
     },
   ],
 };
@@ -146,7 +161,18 @@ export default function Gallery() {
                     transition={{ type: "spring", stiffness: 250 }}
                     onClick={() => openZoom(post, i)}
                   >
-                    {isVimeo(src) ? (
+                    
+                    {isYouTube(src) ? (
+                      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                        <div style={{ position: 'absolute', inset: 0, zIndex: 10, cursor: 'pointer' }} />
+                        <iframe 
+                          src={`https://www.youtube.com/embed/${getYouTubeId(src)}?autoplay=1&mute=1&controls=0&loop=1&playlist=${getYouTubeId(src)}`} 
+                          style={{ width: "100%", height: "100%", pointerEvents: "none" }} 
+                          frameBorder="0" 
+                          allow="autoplay; fullscreen; picture-in-picture" 
+                        />
+                      </div>
+                    ) : isVimeo(src) ? (
                       <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                         <div style={{ position: 'absolute', inset: 0, zIndex: 10, cursor: 'pointer' }} />
                         <iframe 
@@ -187,7 +213,26 @@ export default function Gallery() {
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.4 }}
           >
-            {isVimeo(zoom.img) ? (
+            
+            {isYouTube(zoom.img) ? (
+              <motion.div
+                key={zoom.img}
+                className="zoom-img"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                style={{ width: "80vw", height: "80vh", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                <iframe 
+                  src={`https://www.youtube.com/embed/${getYouTubeId(zoom.img)}?autoplay=1`} 
+                  style={{ width: "100%", height: "100%" }} 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen
+                />
+              </motion.div>
+            ) : isVimeo(zoom.img) ? (
               <motion.div
                 key={zoom.img}
                 className="zoom-img"
