@@ -7,25 +7,39 @@ const isVideo = (url) => {
   return url && url.match(/\.(mp4|webm|ogg|mov)$/i);
 };
 
+const isVimeo = (url) => {
+  return url && url.includes("vimeo.com");
+};
+
+const getVimeoId = (url) => {
+  const match = url.match(/vimeo\.com\/(\d+)/);
+  return match ? match[1] : null;
+};
+
 const IMAGES = {
   personal: [
     {
       id: 1,
+      caption: "A new Vimeo video",
+      photos: ["https://vimeo.com/1220211241"],
+    },
+    {
+      id: 2,
       caption: "Just me enjoying nature 🌄",
       photos: ["/gallery/darsh photo-1.jpg", "/gallery/dear.jpg"],
     },
     {
-      id: 2,
+      id: 3,
       caption: "Some beautiful clips of daman🏖️",
       photos: ["/gallery/Daman_compressed.mp4"],
     },
     {
-      id: 3,
+      id: 4,
       caption: "Participated in google hackethon mumbai",
       photos: ["/gallery/Google_Hackathon_compressed.mp4"],
     },
     {
-      id: 4,
+      id: 5,
       caption: "Nainital — nature’s way of showing off 😍",
       photos: ["/gallery/Nainital_compressed.mp4"],
     },
@@ -132,7 +146,17 @@ export default function Gallery() {
                     transition={{ type: "spring", stiffness: 250 }}
                     onClick={() => openZoom(post, i)}
                   >
-                    {isVideo(src) ? (
+                    {isVimeo(src) ? (
+                      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                        <div style={{ position: 'absolute', inset: 0, zIndex: 10, cursor: 'pointer' }} />
+                        <iframe 
+                          src={`https://player.vimeo.com/video/${getVimeoId(src)}?background=1`} 
+                          style={{ width: "100%", height: "100%", objectFit: "cover", pointerEvents: "none" }} 
+                          frameBorder="0" 
+                          allow="autoplay; fullscreen; picture-in-picture" 
+                        />
+                      </div>
+                    ) : isVideo(src) ? (
                       <video 
                         src={src} 
                         muted 
@@ -163,7 +187,25 @@ export default function Gallery() {
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.4 }}
           >
-            {isVideo(zoom.img) ? (
+            {isVimeo(zoom.img) ? (
+              <motion.div
+                key={zoom.img}
+                className="zoom-img"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                style={{ width: "80vw", height: "80vh", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                <iframe 
+                  src={`https://player.vimeo.com/video/${getVimeoId(zoom.img)}?autoplay=1&title=0&byline=0&portrait=0`} 
+                  style={{ width: "100%", height: "100%" }} 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen
+                />
+              </motion.div>
+            ) : isVideo(zoom.img) ? (
               <motion.video
                 key={zoom.img}
                 src={zoom.img}
