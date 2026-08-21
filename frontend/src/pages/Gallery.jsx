@@ -58,6 +58,11 @@ const IMAGES = {
       caption: "YouTube Video",
       photos: ["https://youtu.be/s85qySBMkzA"],
     },
+    {
+      id: 7,
+      caption: "Ujjain",
+      photos: ["https://youtu.be/zwKmG2zDFjI?si=FLti9WClS3zmb6tu"],
+    },
   ],
 };
 
