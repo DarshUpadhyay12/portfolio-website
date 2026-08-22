@@ -29,11 +29,6 @@ const getYouTubeId = (url) => {
 const IMAGES = {
   personal: [
     {
-      id: 1,
-      caption: "Mussoorie🫶 ",
-      photos: ["https://vimeo.com/1220211241"],
-    },
-    {
       id: 2,
       caption: "Just me enjoying nature 🌄",
       photos: ["/gallery/darsh photo-1.jpg", "/gallery/dear.jpg"],
@@ -47,11 +42,6 @@ const IMAGES = {
       id: 4,
       caption: "Participated in google hackethon mumbai",
       photos: ["/gallery/Google_Hackathon_compressed.mp4"],
-    },
-    {
-      id: 5,
-      caption: "Nainital — nature’s way of showing off 😍",
-      photos: ["/gallery/Nainital_compressed.mp4"],
     },
     {
       id: 6,
