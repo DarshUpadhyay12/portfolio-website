@@ -21,6 +21,7 @@
   width: 100%;
   max-width: 1200px;
   gap: 4rem;
+  position: relative;
   z-index: 10;
 }
 

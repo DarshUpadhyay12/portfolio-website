@@ -45,8 +45,8 @@ export default function Home() {
 
   return (
     <section className="home-section">
+      <Suspense fallback={null}><Hero3D /></Suspense>
       <div className="home-top">
-        <Suspense fallback={null}><Hero3D /></Suspense>
         
         {/* Left: Info Section */}
         <motion.div
