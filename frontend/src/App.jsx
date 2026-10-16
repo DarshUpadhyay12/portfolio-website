@@ -46,9 +46,6 @@ export default function App() {
           </Suspense>
         </motion.main>
       </AnimatePresence>
-      <footer className="footer">
-        © {new Date().getFullYear()} Darsh Upadhyay — Built with React
-      </footer>
     </div>
   )
 }
